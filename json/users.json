@@ -1,0 +1,8 @@
+{
+"id": "1",
+"name": "Vivek",
+"email": "thepurpleaxe@duck.com",
+"password": "admin",
+"isActive": true,
+"roles": []
+}

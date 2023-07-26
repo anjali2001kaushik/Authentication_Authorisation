@@ -1,0 +1,308 @@
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid{
+  margin-top: 50px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h3{
+  text-align: center;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #45a049;
+}
+
+.tab.active {
+  background-color: #45a049;
+}
+
+.tab-content {
+  display: none;
+}
+
+.crud-buttons {
+  display: flex;
+}
+
+.crud-buttons button {
+  /* background-color: #4caf50; */
+  color: red;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.crud-buttons button:hover {
+  background-color: white;
+}
+
+.logout-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.createUser {
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  /* transition: opacity 0.3s ease-in-out; */
+  backdrop-filter: blur(10px);
+}
+
+#overlay.overlay-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#popupForm {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 9999;
+}
+
+#popupForm h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#popupForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#popupForm input[type="text"],
+#popupForm input[type="email"],
+#popupForm input[type="password"],
+#popupForm select {
+  width: 100%;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#popupForm .form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#popupForm button[type="submit"],
+#popupForm button[type="button"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#popupForm button[type="submit"] {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#popupForm button[type="submit"]:hover,
+#popupForm button[type="button"]:hover {
+  background-color: #45a049;
+}
+
+
+
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.User-area {
+  position: absolute;
+  top: 10px;
+  right: 220px;
+  cursor: pointer;
+}
+
+.User-area > .User-avtar {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 12px -5px #000;
+}
+
+.User-area > .User-avtar > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.User-Dropdown:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-left: -0.5em;
+  right: 0px;
+  box-sizing: border-box;
+  border: 7px solid black;
+  border-color: transparent transparent #ffffff #ffffff;
+  transform-origin: 0 0;
+  transform: rotate(135deg);
+  box-shadow: -3px 3px 3px -3px rgba(214, 214, 214, 0.78);
+}
+
+.User-Dropdown {
+  display: none;
+  position: absolute;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0px 0px 8px rgba(214, 214, 214, 0.78);
+  list-style: none;
+  padding: 0 20px;
+  width: 150px;
+  margin: 0;
+  top: 70px;
+  right: -9%;
+}
+
+.User-Dropdown.U-open {
+  display: block;
+}
+
+.User-Dropdown > li {
+  padding: 0px;
+  line-height: 47px;
+  border-bottom: 1px solid rgba(215, 215, 215, 0.17);
+}
+
+.User-Dropdown > li:last-child {
+  border-bottom: 0px;
+}
+
+.User-Dropdown > span {
+  background: #16d67a;
+  padding: 3px 10px;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 13px;
+}
+
+
+.User-Dropdown > li:hover:before {
+  width: 5px;
+  border-radius: 30px;
+}
+

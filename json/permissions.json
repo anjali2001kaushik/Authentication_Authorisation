@@ -1,0 +1,22 @@
+{
+  "permissions": [
+    {
+      "id": "793a18b6-59ab-46bc-983b-aa4cc42f54a4",
+      "name": "GET-PERMISSION",
+      "description": "Allows admin to get permission details by ID",
+      "isActive": true
+    },
+    {
+      "id": "2d144a0c-772d-405d-8999-875600937e5f",
+      "name": "UPDATE-PERMISSION",
+      "description": "Allows admin to update a permission by ID",
+      "isActive": true
+    },
+    {
+      "id": "c4077633-0996-4326-abb4-87db4460aacf",
+      "name": "DELETE-PERMISSION",
+      "description": "Allows admin to delete a permission by ID",
+      "isActive": true
+    }
+  ]
+}

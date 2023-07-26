@@ -1,0 +1,22 @@
+{
+  "roles": [
+    {
+      "id": "1",
+      "name": "admin",
+      "permissions": [
+        "648c319cb5ec231cac2883c9",
+        "648c319cb5ec231cac2883ca",
+        "648c319cb5ec231cac2883cb"
+      ],
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "name": "manager",
+      "permissions": [
+        "READ"
+      ],
+      "isActive": true
+    }
+  ]
+}

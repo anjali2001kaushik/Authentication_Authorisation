@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/dashboad.css" />
+    <script
+      src="https://kit.fontawesome.com/a0a07c36eb.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Javascript/adminDashboard.js"></script>
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Admin Dashboard</h1>
+      <button id="logoutButton" class="logout-button">Logout</button>
+      <div class="tab-container">
+        <button class="tab active">Users</button>
+        <button class="tab">Roles</button>
+        <button class="tab">Permissions</button>
+      </div>
+      <div class="tab-content" id="users" style="display: block">
+        <h2>Users</h2>
+        <div class="crud-buttons">
+          <button id="createUser">
+            <i class="fa-sharp fa-solid fa-plus"></i>
+          </button>
+          <button id="viewUser">
+            <i class="fa-sharp fa-solid fa-eye"></i>
+          </button>
+          <button id="editUser"><i class="fa-solid fa-pen"></i></button>
+          <button id="deleteUser"><i class="fa-solid fa-trash"></i></button>
+        </div>
+      </div>
+      <div class="tab-content" id="roles">
+        <h2>Roles</h2>
+        <div class="crud-buttons">
+          <button id="createRole">
+            <i class="fa-sharp fa-solid fa-plus"></i>
+          </button>
+          <button id="viewRole">
+            <i class="fa-sharp fa-solid fa-eye"></i>
+          </button>
+          <button id="editRole"><i class="fa-solid fa-pen"></i></button>
+          <button id="deleteRole"><i class="fa-solid fa-trash"></i></button>
+        </div>
+      </div>
+      <div class="tab-content" id="permissions">
+        <h2>Permissions</h2>
+        <div class="crud-buttons">
+          <button id="createPermission">
+            <i class="fa-sharp fa-solid fa-plus"></i>
+          </button>
+          <button id="viewPermission">
+            <i class="fa-sharp fa-solid fa-eye"></i>
+          </button>
+          <button id="editPermission"><i class="fa-solid fa-pen"></i></button>
+          <button id="deletePermission">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </div>
+      <div id="overlay"></div>
+      <div id="popupForm" style="display: none">
+        <h2>Create User</h2>
+        <form action="/register" method="POST">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <div class="form-group">
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+              <option value="admin">Admin</option>
+              <option value="manager">Manager</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="isActive">Active Status:</label>
+            <select id="isActive" name="isActive" required>
+              <option value="true">Active</option>
+              <option value="false">Inactive</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit">Submit</button>
+            <button type="button" id="close_button">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
